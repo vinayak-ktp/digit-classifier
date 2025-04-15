@@ -55,10 +55,10 @@ class CategoricalCrossEntropy:
         self.activation = Softmax()
         self.loss = CCELoss()
 
-    def forward(self, inputs, y_true):
+    def forward(self, inputs, y_true, type='train'):
         self.activation.forward(inputs)
         self.output = self.activation.output  # y_pred
-        if y_true != None:
+        if type == 'train':
             self.loss_value = self.loss.calculate(self.output, y_true)
 
     def backward(self, y_pred, y_true):

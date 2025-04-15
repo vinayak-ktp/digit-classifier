@@ -40,7 +40,7 @@ Output: Probability scores for digits 0–9
 - Dataset: MNIST (60k samples)
 - Loss: Categorical Cross-Entropy  
 - Accuracy after training: **~98%**  
-- Training time: ~47 seconds (CPU)  
+- Training time: ~59 seconds (CPU)  
 
 <!-- --- -->
 
@@ -74,6 +74,11 @@ Output: Probability scores for digits 0–9
 
 <!-- --- -->
 
-<!-- ## ✨ Demo
+## ✨ Demo
 
-![demo-gif](demo.gif)  -->
+![demo-gif](./demo/demo_vf.gif) 
+
+## ⚠️ Important Note
+
+Accuracy of this model might be suboptimal because its hyperparameters have not been tuned.
+This model's performance could be improved with hyperparameter tuning.

@@ -34,7 +34,7 @@ class Model:
         self.activation2.forward(self.dense2.output)
         self.dropout2.forward(self.activation2.output)
         self.dense3.forward(self.dropout2.output)
-        self.loss_activation.forward(self.dense3.output, y)
+        self.loss_activation.forward(self.dense3.output, y, type=type)
 
         return self.loss_activation.output
 

@@ -5,7 +5,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from model.model import Model
 model = Model()
 
-params = np.load('../model/parameters.npz')
+# if the path doesn't work, use '../model/parameters.npz'
+params = np.load('model/parameters.npz')
 model.dense1.weights = params['w1']
 model.dense1.biases = params['b1']
 model.dense2.weights = params['w2']
@@ -70,6 +71,7 @@ class App:
     def clear_canvas(self):
         self.canvas.delete("all")
         self.image = Image.new('L', (self.canvas_size, self.canvas_size), 255)
+        self.update_progress_bars()
     
     def preprocess_image(self):
         img = self.image.convert('L')  # Convert to grayscale (already in grayscale mode)
